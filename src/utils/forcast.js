@@ -9,6 +9,7 @@ const forcast = (latitude, longitude, callback) => {
             callback("Unable to find location", undefined);
         }else {
             callback(undefined, {
+                windSpeed: body.daily.data[0].windSpeed, 
                 summary: body.daily.data[0].summary,
                 temperature: body.currently.temperature,
                 precipPropability: body.currently.precipProbability
